@@ -1,0 +1,24 @@
+let 
+{Cohort1Marks studentId:int ; totalMarks:int ; avgMarks:int end} 
+cohort1_marks = 
+relation {Cohort1Marks studentId:int ; totalMarks:int ; avgMarks:int end} 
+     row 1968 ; (99 + 98 + 67 + 75) ; (99 + 98 + 67 + 75)/4 end
+     row 1969 ; (95 + 78 + 77 + 85) ; (95 + 78 + 77 + 85)/4 end
+     row 1978 ; (89 + 88 + 91 + 90) ; (89 + 88 + 91 + 90)/4 end
+     row 1999 ; true ; (92 + 99 + 90 + 89)/4 end
+     row 1865 ; (99 + 98 + 97 + 75) ; (99 + 98 + 97 + 75)/4 end
+     row 1882 ; (87 + 88 + 77 + 85) ; (87 + 88 + 77 + 85)/4 end
+     end
+{Cohort1Gender studentId:int ; isMale:bool end} 
+cohort1_gender = 
+relation {Cohort1Gender studentId:int ; isMale:bool end}
+     row 1968 ; true  end
+     row 1969 ; false end
+     row 1978 ; true  end
+     row 1999 ; false end
+     row 1865 ; true  end
+     row 1882 ; false end
+     end
+in
+    cohort1_marks |><| cohort1_gender
+end

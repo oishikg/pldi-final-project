@@ -1,0 +1,22 @@
+
+let 
+{UserAge userId:int ; userAge:int end} 
+x = relation {UserAge userId:int ; userAge:int end} 
+     row 123 ; 20 end
+     row 234 ; 21 end
+     row 345 ; 22 end
+     row 446 ; 23 end
+     row 447 ; 15 end
+     row 448 ; 29 end
+     end
+{UserGender userDoB:int ; isMale:bool end}
+y = relation {UserGender userDoB:int ; isMale:bool end} 
+     row 19960709 ; false end
+     row 19980810 ; true  end
+     row 19990408 ; true  end
+     row 20000709 ; true  end
+     row 19628672 ; false end
+     end
+in 
+    x |><| y
+end

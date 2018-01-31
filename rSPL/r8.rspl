@@ -1,0 +1,31 @@
+let 
+{TrafficViolations licenseNum:int ; isMale:bool ; numViolations:int ; lastDateOfViolation:int end} 
+trafficViolationDataSet = 
+relation {TrafficViolations licenseNum:int ; isMale:bool ; numViolations:int ; lastDateOfViolation:int end} 
+         row 79834 ; true  ; 14 ; 20150703 end
+         row 72134 ; false ; 06 ; 20080709 end
+         row 98213 ; false ; 08 ; 20170103 end
+         row 12398 ; true  ; 03 ; 20160709 end
+         row 78943 ; false ; 09 ; 20161014 end 
+         end
+{TrafficViolaterAge licenseNum:int ; violaterAge:int end} 
+trafficViolaterAgeDataSet = 
+relation {TrafficViolaterAge licenseNum:int ; violaterAge:int end} 
+         row 79834 ; 22 end
+         row 72134 ; 21 end
+         row 98213 ; 36 end
+         row 12398 ; 49 end
+         row 78943 ; 51 end 
+         end
+{TrafficViolaterPincode licenseNum:int ; violaterPin:int end} 
+trafficViolaterPincodeDataSet =
+relation {TrafficViolaterPincode licenseNum:int ; violaterPin:int end} 
+         row 79834 ; 700089 end
+         row 72134 ; 700064 end
+         row 98213 ; 700061 end
+         row 12398 ; 700001 end
+         row 78943 ; 789123 end 
+         end
+in
+   (trafficViolationDataSet |><| trafficViolaterAgeDataSet |><| trafficViolaterPincodeDataSet) ||| (licenseNum , violaterPin , numViolations )
+end

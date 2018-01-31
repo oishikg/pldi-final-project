@@ -1,0 +1,30 @@
+
+let 
+{UserAge userId:int ; userAge:int end} 
+x = relation {UserAge userId:int ; userAge:int end} 
+     row 123 ; 20 end
+     row 234 ; 21 end
+     row 345 ; 22 end
+     row 446 ; 23 end
+     row 447 ; 15 end
+     row 448 ; 29 end
+     end
+{UserGender userId:int ; isMale:bool end}
+y = relation {UserGender userId:int ; isMale:bool end} 
+     row 123 ; false end
+     row 234 ; true  end
+     row 567 ; true  end
+     row 447 ; true  end
+     row 448 ; false end
+     end
+{PhoneNumber userId:int ; phNum:int end}
+z = relation {PhoneNumber userId:int ; phNum:int end} 
+     row 123 ; 84201026 end
+     row 234 ; 98763012 end
+     row 567 ; 94772994 end
+     row 447 ; 84201029 end
+     row 448 ; 34251029 end
+     end
+in 
+    (x |><| y |><| z) ||| (userId , phNum)
+end
