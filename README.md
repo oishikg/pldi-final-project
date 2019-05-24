@@ -1,6 +1,12 @@
 # rSPL : A Typsesafe Relational Extension of simPL
 
-Discuss project here.
+This project develops a domain specific language, `rSPL`, which is an
+extension of `simPL`. `simPL` is an `OCaml` based language developed by the
+Programming Language Design and Implementation course staff (YSC3208).
+
+`rSPL` includes relational operations similar to those found in database
+querying languages like SQL. 
+
 
 ## Getting started
 
